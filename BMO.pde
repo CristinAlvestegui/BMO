@@ -17,9 +17,8 @@ class BMO {
     rect(poX, poY, 1000, 400);
   }//Fim da função para desenho do rosto do BMO
 
-  void pisca( float piscaEye ){
-    //BMO piscadela olho izuquerdo
-    if ((mouseX > 500) && (mouseX < 535)){
+  //BMO piscadela olho izquerdo
+    if (mousePressed && (mouseButton == LEFT)){
       fill(5, 5, 5);
       ellipse(poX*4, poY*4-10, eyeSize, piscaEye);//fechando izquerdo
     } else {
@@ -29,7 +28,7 @@ class BMO {
     }
     
     //BMO piscadela olho direito
-    if((mouseX > 700) && (mouseX < 750)){
+    if(mousePressed && (mouseButton == RIGHT)){
       fill(5, 5, 5);
       ellipse(poX*6-40, poY*4-10, eyeSize, piscaEye);//fechado direito
     } else{
