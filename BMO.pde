@@ -16,26 +16,27 @@ class BMO {
     fill(191, 245, 223);
     rect(poX, poY, 1000, 400);
   }//Fim da função para desenho do rosto do BMO
+  
+  void pisca(int piscaEye){
+    //BMO piscadela olho izquerdo
+      if (mousePressed && (mouseButton == LEFT)){
+        fill(5, 5, 5);
+        ellipse(poX*4, poY*4-10, eyeSize, piscaEye);//fechando izquerdo
+      } else {
+        //olhos izquerdo
+        fill(5, 5, 5);
+        ellipse(poX*4, poY*4-10, eyeSize, eyeSize);
+      }//fim do Else olho izquerdo
 
-  //BMO piscadela olho izquerdo
-    if (mousePressed && (mouseButton == LEFT)){
-      fill(5, 5, 5);
-      ellipse(poX*4, poY*4-10, eyeSize, piscaEye);//fechando izquerdo
-    } else {
-      //olhos izquerdo
-      fill(5, 5, 5);
-      ellipse(poX*4, poY*4-10, eyeSize, eyeSize);
-    }
-    
-    //BMO piscadela olho direito
-    if(mousePressed && (mouseButton == RIGHT)){
-      fill(5, 5, 5);
-      ellipse(poX*6-40, poY*4-10, eyeSize, piscaEye);//fechado direito
-    } else{
-      //olhos direito
-      fill(5, 5, 5);
-      ellipse(poX*6-40, poY*4-10, eyeSize, eyeSize);
-    }
+      //BMO piscadela olho direito
+      if(mousePressed && (mouseButton == RIGHT)){
+        fill(5, 5, 5);
+        ellipse(poX*6-40, poY*4-10, eyeSize, piscaEye);//fechado direito
+      } else{
+        //olhos direito
+        fill(5, 5, 5);
+        ellipse(poX*6-40, poY*4-10, eyeSize, eyeSize);
+      }//Fim do else olho direito
   }//Fim da função para pisca de olhos
 
   void bocaBmo(){
